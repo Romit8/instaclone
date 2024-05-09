@@ -1,0 +1,160 @@
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-sm-3,
+.col-sm-9 {
+  flex-basis: 0;
+  flex-grow: 1;
+  /* max-width: 100%; */
+}
+
+/* Left Sidebar Styles */
+.fixed-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 20px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+}
+
+ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Right Sidebar Styles */
+.right-sidebar {
+  padding: 20px;
+}
+
+.card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.icon-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  font-size: 31px;
+}
+
+.icon {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Comment Modal Styles (AddCommentModal component) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media(max-width:500px) {
+  .left-sidebar {
+      z-index: 100;
+      width: 90%;
+      padding: 0px;
+      margin: 0px;
+      position: fixed;
+      bottom: 0;
+  }
+
+  .left-sidebar ul {
+      display: flex;
+  }
+  .left-sidebar ul li a{
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 10px
+  }
+  .nav-name {
+      display: none;
+  }
+
+  .logo {
+      display: none !important;
+  }
+  
+}
